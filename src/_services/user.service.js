@@ -1,4 +1,3 @@
-import { authHeader } from '../_helpers';
 import { serviceConstants } from '../_constants';
 
 export const userService = {

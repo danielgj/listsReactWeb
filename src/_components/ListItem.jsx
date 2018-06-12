@@ -18,18 +18,13 @@ export class ListItem extends React.Component {
         
         const list = this.props.item;
         
-        const actionLinkStyle = {
-            color: 'blue',
-            float: 'right'
-        }
-        
         return(
             <div className="col-md-6">
                <div className="card">
                   <div className="card-body">
                     <h5 className="card-title">
                         {list.name}
-                        <img src={trashIcon} onClick={this.deleteList} className="text-right" alt="Eliminar"/>      
+                        <img src={trashIcon} onClick={this.deleteList} className="actionIcon" alt="Eliminar"/>      
                     </h5>
                     
                     <p className="card-text font-italic">{list.description}</p>
@@ -38,10 +33,10 @@ export class ListItem extends React.Component {
                     {list.items && list.items.length !== 0  &&
                           
                         
-                        <div class="inbox">         
+                        <div className="inbox">         
                             {list.items.map((item, index) =>
-                                <div className="item">
-                                    <input type="checkbox" key={item._id}/> 
+                                <div className="item" key={item._id}>
+                                    <input type="checkbox" /> 
                                     <p className="itemDescr">{item.description}</p>
                                 </div>
                             )}

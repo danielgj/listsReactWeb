@@ -3,11 +3,6 @@ import { Link } from 'react-router-dom';
 
 export class Header extends React.Component {
     
-    constructor(props) {
-        super(props);        
-    }
-    
-    
     render() {
         
         const displayHeader = this.props.displayHeader;
